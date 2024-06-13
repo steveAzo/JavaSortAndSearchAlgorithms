@@ -16,7 +16,7 @@ public class Main {
     }
 
     private static void handleSearch(Scanner scanner) {
-        System.out.println("Choose a search algorithm: 1) Linear Search 2) Binary Search");
+        System.out.println("Choose a search algorithm: 1) Linear Search 2) Binary Search 3) Exponential Search 4) Interpolation Search");
         int choice = scanner.nextInt();
         SearchAlgorithm searchAlgorithm;
 
@@ -24,6 +24,10 @@ public class Main {
             searchAlgorithm = new LinearSearch();
         } else if (choice == 2) {
             searchAlgorithm = new BinarySearch();
+        } else if (choice == 3) {
+            searchAlgorithm = new ExponentialSearch();
+        } else if (choice == 4) {
+            searchAlgorithm = new InterpolationSearch();
         } else {
             System.out.println("Invalid choice.");
             return;
@@ -47,7 +51,7 @@ public class Main {
     }
 
     private static void handleSort(Scanner scanner) {
-        System.out.println("Choose a sorting algorithm: 1) Bubble Sort 2) Quick Sort");
+        System.out.println("Choose a sorting algorithm: 1) Bubble Sort 2) Quick Sort 3) Insertion Sort 4) Merge Sort");
         int choice = scanner.nextInt();
         SortAlgorithm sortAlgorithm;
 
@@ -55,6 +59,10 @@ public class Main {
             sortAlgorithm = new BubbleSort();
         } else if (choice == 2) {
             sortAlgorithm = new QuickSort();
+        } else if (choice == 3) {
+            sortAlgorithm = new InsertionSort();
+        } else if (choice == 4) {
+            sortAlgorithm = new MergeSort();
         } else {
             System.out.println("Invalid choice.");
             return;
